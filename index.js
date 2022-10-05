@@ -29,17 +29,17 @@ app.get('/', (req,res) => {
     res.render('index.ejs');
 })
 
-app.get('/',(req,res) => {
-    var cursor = db.collection('multimidia').find()
-});
+//app.get('/',(req,res) => {
+//    var cursor = db.collection('multimidia').find()
+//});
 
-app.get('/show', (req,res) => {
-    db.collection('multimidia').find().toArray((err,results) => {
-        if (err) return console.log(err)
-        //console.log(results)
-        res.render('show.ejs', {data: results})
-   });
-});
+//app.get('/show', (req,res) => {
+//    db.collection('multimidia').find().toArray((err,results) => {
+//        if (err) return console.log(err)
+//        //console.log(results)
+//        res.render('show.ejs', {data: results})
+//   });
+//});
 
 //app.post('/show', (req,res) => {
 //    db.collection('multimidia').insertOne({"cod":req.body.cod,"lat":req.body.lat,"long":req.body.long}, (err, result) => {
