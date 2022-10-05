@@ -41,11 +41,11 @@ app.get('/show', (req,res) => {
    });
 });
 
-app.post('/show', (req,res) => {
-    db.collection('multimidia').insertOne({"cod":req.body.cod,"lat":req.body.lat,"long":req.body.long}, (err, result) => {
-        if (err) return console.log(err)
+//app.post('/show', (req,res) => {
+//    db.collection('multimidia').insertOne({"cod":req.body.cod,"lat":req.body.lat,"long":req.body.long}, (err, result) => {
+//        if (err) return console.log(err)
 
-        console.log('Salvamento no banco concluído')
-        res.redirect('/show')
-    });
-});
+//        console.log('Salvamento no banco concluído')
+//        res.redirect('/show')
+//    });
+//});
