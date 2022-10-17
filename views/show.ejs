@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View results</title>
+</head>
+
+<body>
+
+    <h2>Registros</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Cod</td>
+                <td>Lat</td>
+                <td>Long</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% data.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.cod %></td>
+                    <td><%= details.lat %></td>
+                    <td><%= details.long %></td>
+                    <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Delete</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+        </table>
+        <button><a href="/">Inserir novo dado</a></button>
+</body>
+</html>
