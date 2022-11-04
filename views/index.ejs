@@ -7,12 +7,23 @@
 
 <body>
 
-    <h2>Registrar</h2>
-    <form action="/show" method="POST">
-            <input type="text" placeholder="Cod. Sala" name="cod">
-            <input type="text" placeholder="Lat" name="lat">
-            <input type="text" placeholder="Long" name="long">
+    <h2>Registrar Novos Caminhos</h2>
+    <form action="/" method="POST">
+            <input type="text" placeholder="Codigo da Sala" name="cod">
+            <input type="text" placeholder="Pontos" name="points">
             <button type="submit">Submit</button>
+    </form>
+
+    <h2>Visualizar um caminho existente</h2>
+    <form action="/show" method="POST">
+        <input type="text" placeholder="Cod" name="cod">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <h2>Visualizar todos os caminhos existentes</h2>
+    <form action="/show" method="GET">
+        <button type="submit">Submit</button>
     </form>
 
 </body> 

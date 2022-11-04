@@ -14,9 +14,9 @@
         <thead>
             <tr>
                 <td>Cod</td>
-                <td>Lat</td>
-                <td>Long</td>
-                <td>Action</td>
+                <td>Points</td>
+                <td>Edit</td>
+                <td>Delete</td>
             </tr>
         </thead>
 
@@ -24,9 +24,9 @@
             <% data.forEach(function(details) { %>
                 <tr>
                     <td><%= details.cod %></td>
-                    <td><%= details.lat %></td>
-                    <td><%= details.long %></td>
-                    <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Delete</a></td>
+                    <td><%= details.points %></td>
+                    <td><a href="/edit/<%= details._id %>">Editar</a></td>
+                    <td><a href="/delete/<%= details._id %>">Delete</a></td>
                 </tr>
             <% }) %>
         </tbody>
